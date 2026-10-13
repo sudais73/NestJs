@@ -11,4 +11,11 @@ export class ProductsService {
         this.products.push(newProduct);
         return newProduct;
     }
+    getProducts() {
+        return this.products    ;
+    }
+    getProductById(productId: string) {
+        const id = parseInt(productId, 10);
+        return this.products.find(product => product.id === id);
+    }
 }
